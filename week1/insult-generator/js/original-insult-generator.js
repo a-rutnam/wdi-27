@@ -169,6 +169,7 @@ const getRandomElement = function( array ){
 
 const generateInsult = function( numberOfInsults=1 ){
 
+  // use ES6 default argument value notation above (numberOfInsults=1) to avoid this check below:
   // if(!numberOfInsults){
   //   numberOfInsults = 1;
   // }
@@ -180,13 +181,13 @@ const generateInsult = function( numberOfInsults=1 ){
     const noun = getRandomElement( nouns );
 
     console.log(`Thou ${ firstAdjective } ${ secondAdjective } ${ noun }!`);
-
   }
 
 };
 
 const generateEveryPossibleInsult = function(){
 
+  // nested loops to generate all possible combinations from all three arrays
   for( let i = 0; i < firstAdjectives.length; i++ ){
     for( let j = 0; j < secondAdjectives.length; j++ ){
       for( let k = 0; k < nouns.length; k++ ){

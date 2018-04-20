@@ -77,6 +77,7 @@ const favouriteMovie = {
   duration: 125,
   stars: ['Joaquim Phoenix', 'Josh Brolin', 'Owen Wilson'],
   printInfo: function(){
+    // 'this' refers to the object this function is inside of (is a method of)
     console.log(`${ this.title } lasts for ${ this.duration } minutes.`);
     console.log(`Stars: ${ this.stars.join(', ') }`);
   }
