@@ -2,30 +2,13 @@
 
 body {
   background-color: PeachPuff;
-  font-family: "Comic Sans MS";
-}
-
-* {
+  /* Too much Comic Sans */
+  /* font-family: "Comic Sans MS"; */
 }
 
 
 div {
-  /* border: 1px solid red; */
-}
-
-#navContainer {
-  /* border: 1px solid red; */
-  padding: 0px;
-  margin: 0px;
-}
-
-.navElement {
-  /* border: 1px solid red; */
-
-  display: inline-block;
-  padding: 0px;
-  margin: 0px;
-  width: 33.3%;
+  border: 1px solid red;
 }
 
 
@@ -34,16 +17,16 @@ h1 {
   color: hotpink;
 }
 
-p.brownBG{
+p.brownBG {
   background-color: hotpink;
   font-family: "Helvetica";
 }
 
-.brownBG{
+.brownBG {
   background-color: brown;
 }
 
-#mostSpecific{
+#mostSpecific {
   background-color: yellow;
 }
 
