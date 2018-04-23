@@ -1,0 +1,72 @@
+
+
+body {
+  background-color: PeachPuff;
+  font-family: "Comic Sans MS";
+}
+
+* {
+}
+
+
+div {
+  /* border: 1px solid red; */
+}
+
+#navContainer {
+  /* border: 1px solid red; */
+  padding: 0px;
+  margin: 0px;
+}
+
+.navElement {
+  /* border: 1px solid red; */
+
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  width: 33.3%;
+}
+
+
+h1 {
+  font-family: "Comic Sans MS";
+  color: hotpink;
+}
+
+p.brownBG{
+  background-color: hotpink;
+  font-family: "Helvetica";
+}
+
+.brownBG{
+  background-color: brown;
+}
+
+#mostSpecific{
+  background-color: yellow;
+}
+
+
+p {
+  border: 1px dashed green;
+}
+
+p#comic {
+  font-family: "Comic Sans MS";
+}
+
+
+img {
+  max-width: 500px;
+  /*
+  several lines
+  for this comment
+
+   */
+}
+
+ul {
+  /* turn off bullet points  */
+  list-style: none;
+}
