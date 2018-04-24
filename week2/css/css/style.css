@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Oswald');
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  /* border: 1px solid green; */
+}
+
+nav div{
+  display: inline-block;
+  background-color: hotpink;
+  border: 0;
+  padding: 10px;
+}
+
+nav div.left{
+  width: 70%;
+}
+
+nav div.right{
+  width: 30%;
+  text-align: right;
+}
+
+/* div.inlineBlockExample:nth-child(1) {
+  background-color: red !important;
+} */
+
+
+#bill {
+  max-width: 300px; 
+  margin-bottom: 20px;
+  transform: rotate(0deg);
+  transition: 2s;
+  filter: none;
+}
+
+#bill:hover {
+  transform: rotate(1080deg); /* could also add: scale(2.0); */
+  /* filter: saturate(0%); */
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+}
+
+div:not(.box) {
+  padding-top: 10px;
+}
+
+div {
+  border: 1px solid red;
+  /* Uncomment this to apply the 'moveUp' animation to all divs:
+  animation: moveUp 2s;
+  animation-fill-mode: forwards;
+  */
+}
+
+@keyframes moveUp {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 2000px;
+  }
+}
+
+div:hover{
+  background-color: DarkGoldenRod;
+}
+
+div.inlineExample {
+  display: inline;
+  width: 200px; /* this will be ignored */
+}
+
+div.blockExample {
+  margin: auto;
+  display: block;
+  width: 200px; /* this will work */
+}
+
+div.firstBlock {
+  margin-top: 20px;
+}
+
+div.inlineBlockExample {
+  display: inline-block;
+  width: 50%; /* relative to the width of the parent */
+}
+
+div.halfOfWindowWidth {
+  display: block;
+  margin: auto;
+  width: 80%; /* half of body tag, i.e. whole page */
+}
+
+div.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border: 1px solid black;
+}
+
+div.staticExample {
+  position: static;
+  left: 200px; /* is ignored */
+}
+
+div.relativeExample {
+  position: relative;
+  left: 50px;
+}
+
+
+div.parentOfAbsolute{
+  position: relative;
+}
+
+div.absoluteExample {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+div.absoluteExample.second {
+  top: 100px;
+  left: 300px;
+}
+
+div.fixedExample {
+  position: fixed;
+  top: 40px;
+  right: 0;
+}
+
+
+
+p {
+  color: lavender;
+  margin-left: 20px;
+  margin-right: 20px;
+}
