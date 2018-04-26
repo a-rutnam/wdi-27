@@ -9,6 +9,7 @@ const userB = {
 };
 
 const printUserInfo = function( user ){
+const printUserInfo = function( user ){
   console.log(`Name: ${ user.firstName }`);
   console.log(`Age: ${ user.age }`);
 }
@@ -42,16 +43,15 @@ const runAnotherFunctionForMe = function( functionToRun ){
 
 runAnotherFunctionForMe(function(){
   console.log('Hello from inside the anonymous function we passed in!');
-  return true;
 });
 
 console.log('About to call setTimeout');
 // window.setTimeout( sayHello, 3000 );
 
 let counter = 0;
-window.setInterval( function(){
+window.setTimeout( function(){
   console.log('I should run three seconds later. Counter: ', counter);
   counter++;
-}, 1000);
+}, 3000);
 
 window.setInterval( sayHello, 1000 );
