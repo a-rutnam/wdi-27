@@ -1,0 +1,13 @@
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.blob {
+  position: absolute;
+  display: inline-block;
+  /* background-color: red; */
+  border-radius: 50%;
+}
