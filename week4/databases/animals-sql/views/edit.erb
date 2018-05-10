@@ -1,0 +1,13 @@
+<h2>Edit <%= @animal["first_name"] %> <%= @animal["last_name"] %></h2>
+<form action="/animals/<%= @animal["id"] %>" method="post">
+  First Name:  <input type="text" name="first_name" value="<%= @animal["first_name"] %>"><br>
+  Last Name:   <input type="text" name="last_name" value="<%= @animal["last_name"] %>"><br>
+  Description: <input type="text" name="description" value="<%= @animal["description"] %>"><br>
+  Species:     <input type="text" name="species" value="<%= @animal["species"] %>"><br>
+  Roundness:   <input type="text" name="roundness" value="<%= @animal["roundness"] %>"><br>
+  Alive:       <input type="text" name="alive" placeholder="1 or 0" value="<%= @animal["alive"] %>"><br>
+  Age:         <input type="text" name="age" value="<%= @animal["age"] %>"><br>
+  Image URL:   <input type="text" name="image_url" value="<%= @animal["image_url"] %>"><br>
+
+  <input type="submit" value="Update Animal">
+</form>
