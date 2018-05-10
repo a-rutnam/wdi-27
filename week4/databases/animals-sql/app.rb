@@ -14,18 +14,14 @@ def db_query( sql )
   result
 end
 
-# index of all animals
-get "/animals" do
-  @animals = db_query( "SELECT * FROM animals;" )
-  erb :index
-end
 
-# show Add Animal form
+# CREATE part 1: show empty form
 get "/animals/new" do
   erb :new
 end
 
-# Add Animal form submits here, to actually create row in DB
+# CREATE part 2: new.erb form submits here; create row in DB
+# This route does not have its own template, it just redirects elsewhere
 post "/animals" do
   sql = "INSERT INTO animals (first_name, last_name, species, description, roundness, alive, age, image_url)
          VALUES(
@@ -39,18 +35,60 @@ post "/animals" do
            '#{ params["image_url"]}'
          );"
   db_query( sql )
-  redirect "/animals"  # no template for the create, we redirect to the index instead
+  redirect "/animals"
 end
 
+
+
+# READ variation 1: index page (all items in table)
+get "/animals" do
+  @animals = db_query( "SELECT * FROM animals;" )
+  erb :index
+end
+
+# READ variation 2: show page (details for a single item)
 get "/animals/:id" do
   @animal = db_query( "SELECT * FROM animals WHERE id = #{ params["id"] };" )
-  @animal = @animal.first # we always get an array of rows, even if there is only one row
+  # We always get an array of rows from a SELECT, even if only one row is returned
+  # ...so we use .first (same as @animal[0]) to deal with just the hash,
+  # instead of an array with a single hash element in it
+  @animal = @animal.first
   erb :show
 end
 
+
+
+# UPDATE part 1: show edit form
 get "/animals/:id/edit" do
   # retrieve the item from the database, so we can populate the form with its fields
   @animal = db_query( "SELECT * FROM animals WHERE id = #{ params["id"] };" )
   @animal = @animal.first
   erb :edit
+end
+
+# UPDATE part 2: edit.erb form submits to here so we can update DB with data from form
+# This route does not have its own template, it just redirects elsewhere
+post "/animals/:id" do
+    sql = "UPDATE animals SET
+      first_name  = '#{ params["first_name"] }',
+      last_name   = '#{ params["last_name"] }',
+      species     = '#{ params["species"] }',
+      description = '#{ params["description"] }',
+      roundness   =  #{ params["roundness"] },
+      alive       =  #{ params["alive"] },
+      age         =  #{ params["age"] },
+      image_url   = '#{ params["image_url"]}'
+      WHERE id = #{ params[:id] };"
+
+    db_query( sql )
+
+    redirect "/animals/#{ params["id"] }"
+end
+
+
+
+# DELETE: remove item from DB and redirect to index
+get "/animals/:id/delete" do
+  db_query( "DELETE FROM animals WHERE id = #{ params["id"] };" )
+  redirect "/animals"
 end
