@@ -5,7 +5,18 @@
 <p>Roundness: <%= @animal["roundness"] %>/10</p>
 <p>Alive: <%= @animal["alive"] == 1 ? "Yes" : "No" %></p>
 <p>Age: <%= @animal["age"] %></p>
-
+<p>
+  Spotters:
+  <ul>
+  <% @animal.spotters.each do |spotter| %>
+    <li>
+       <a href="/spotters/<%= spotter.id %>">
+         <%= spotter.name %>
+       </a>
+    </li>
+  <% end %>
+  </ul>
+</p>
 <img src="<%= @animal["image_url"] %>">
 
 <br>

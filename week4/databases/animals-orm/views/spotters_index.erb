@@ -1,0 +1,11 @@
+
+<h2>All Spotters</h2>
+
+<ul>
+<% @spotters.each do |s| %>
+  <li>
+    <a href="/spotters/<%= s.id %>"><%= s.name %></a>
+    (<%= s.location %>)
+  </li>
+<% end %>
+</ul>

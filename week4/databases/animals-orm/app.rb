@@ -167,10 +167,27 @@ get "/spotters/new" do
 end
 
 # CREATE part 2: form submits to here
-post "/spotters/new" do
+post "/spotters" do
+
   spotter = Spotter.new
   spotter.name = params[:name]
   spotter.location = params[:location]
   spotter.spotted = params[:spotted]
   spotter.animal_id = params[:animal_id]
+
+  spotter.save
+
+  redirect "/spotters"
+end
+
+# READ 1: index of all spotters
+get "/spotters" do
+  @spotters = Spotter.all
+  erb :spotters_index
+end
+
+# READ 2: show page for a specific spotter
+get "/spotters/:id" do
+  @spotter = Spotter.find params[:id]
+  erb :spotters_show
 end
