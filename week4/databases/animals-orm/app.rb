@@ -1,8 +1,7 @@
 
 require 'sinatra'
 require 'sinatra/reloader'
-require 'sqlite3'
-
+# require 'sqlite3' # HAHAHAHAHA
 require 'active_record'
 
 ActiveRecord::Base.establish_connection(
@@ -12,24 +11,28 @@ ActiveRecord::Base.establish_connection(
 ActiveRecord::Base.logger = Logger.new( STDERR )
 
 class Animal < ActiveRecord::Base
+  has_many :spotters   # this requires the animal_id field in spotters
 end
 
-
-def db_query( sql )
-  db = SQLite3::Database.new( "database.db" ) # make a connection
-  db.results_as_hash = true  # easier to access results as hash keys
-  puts "=" * 100
-  puts sql   # debugging output
-  puts "=" * 100
-  result = db.execute( sql )  # run the query
-  db.close   # close the connection
-  result
+class Spotter < ActiveRecord::Base
+  belongs_to :animal   # requires the animal_id field in this class's table
 end
+
+# def db_query( sql )
+#   db = SQLite3::Database.new( "database.db" ) # make a connection
+#   db.results_as_hash = true  # easier to access results as hash keys
+#   puts "=" * 100
+#   puts sql   # debugging output
+#   puts "=" * 100
+#   result = db.execute( sql )  # run the query
+#   db.close   # close the connection
+#   result
+# end
 
 
 # CREATE part 1: show empty form
 get "/animals/new" do
-  erb :new
+  erb :animals_new
 end
 
 # CREATE part 2: new.erb form submits here; create row in DB
@@ -77,7 +80,7 @@ end
 get "/animals" do
   # @animals = db_query( "SELECT * FROM animals;" )
   @animals = Animal.all
-  erb :index
+  erb :animals_index
 end
 
 # READ variation 2: show page (details for a single item)
@@ -88,7 +91,7 @@ get "/animals/:id" do
   # # instead of an array with a single hash element in it
   # @animal = @animal.first
   @animal = Animal.find params[:id]
-  erb :show
+  erb :animals_show
 end
 
 
@@ -99,7 +102,7 @@ get "/animals/:id/edit" do
   # @animal = db_query( "SELECT * FROM animals WHERE id = #{ params[:id] };" )
   # @animal = @animal.first
   @animal = Animal.find params[:id]   # parentheses are optional
-  erb :edit
+  erb :animals_edit
 end
 
 # UPDATE part 2: edit.erb form submits to here so we can update DB with data from form
@@ -146,11 +149,28 @@ end
 get "/animals/:id/delete" do
   # db_query( "DELETE FROM animals WHERE id = #{ params["id"] };" )
 
-  animal = Animal.find params[:id].destroy  # first retrieve the row
+  animal = Animal.find params[:id]  # first retrieve the row
   animal.destroy  # then call the destroy method on the returned object
 
   # One-liner using method chaining:
   # Animal.find( params[:id] ).destroy
 
   redirect "/animals"
+end
+
+
+# Spotters CRUD system
+
+# CREATE part 1: empty form
+get "/spotters/new" do
+  erb :spotters_new
+end
+
+# CREATE part 2: form submits to here
+post "/spotters/new" do
+  spotter = Spotter.new
+  spotter.name = params[:name]
+  spotter.location = params[:location]
+  spotter.spotted = params[:spotted]
+  spotter.animal_id = params[:animal_id]
 end
