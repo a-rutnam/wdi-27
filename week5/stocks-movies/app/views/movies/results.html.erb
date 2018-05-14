@@ -1,0 +1,16 @@
+<h1>Results for "<%= @query %>"</h1>
+<hr>
+
+<ul>
+<% @results["results"].each do |movie| %>
+  <li>
+    <a href="/movies/<%= movie["id"] %>">
+      <% if movie["poster_path"].present? %>
+        <%= image_tag @img_base_url +  movie["poster_path"] %>
+      <% else %>
+        <%= image_tag "http://fillmurray.com/185/278" %>
+      <% end %>
+    </a>
+  </li>
+<% end %>
+</ul>

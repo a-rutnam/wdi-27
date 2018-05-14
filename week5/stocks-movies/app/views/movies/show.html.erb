@@ -1,0 +1,8 @@
+
+<h1>Details for <%= @movie["title"] %></h1>
+<hr>
+<p>Budget: <%= number_to_currency @movie["budget"] %></p>
+
+<p>Overview: <%= @movie["overview"] %></p>
+
+<%= image_tag @img_base_url + @movie["poster_path"]  %>
