@@ -1,0 +1,13 @@
+<h2>Edit <%= @planet.name %></h2>
+
+<form action="<%= planet_path( @planet.id ) %>" method="post">
+  Name: <input type="text" name="name" value="<%= @planet.name %>"><br>
+  Image URL: <input type="text" name="image" value="<%= @planet.image %>"><br>
+  Orbit: <input type="text" name="orbit" value="<%= @planet.orbit %>"><br>
+  Diameter: <input type="text" name="diameter" value="<%= @planet.diameter %>"><br>
+  Mass: <input type="text" name="mass" value="<%= @planet.mass %>"><br>
+  Temp: <input type="text" name="temperature" value="<%= @planet.temperature %>"><br>
+  Moons: <input type="text" name="moons" value="<%= @planet.moons %>"><br>
+  <br>
+  <input type="submit" value="Update Planet">
+</form>

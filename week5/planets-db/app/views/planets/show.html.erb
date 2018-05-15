@@ -1,0 +1,28 @@
+
+<h2><%= @planet.name %></h2>
+
+<p> <strong>Orbit:</strong> <%= @planet.orbit %> earth orbits</p>
+<p> <strong>Diameter:</strong> <%= @planet.diameter %> earth diameters</p>
+<p> <strong>Mass:</strong> <%= @planet.mass %> earth masses</p>
+<p> <strong>Temperature:</strong> <%= @planet.temperature %> earth temp</p>
+<p> <strong>Moons:</strong> <%= @planet.moons %></p>
+<br>
+
+<%# ensure that image is a non-zero-length string %>
+<% if @planet.image.present? %>
+  <marquee>
+    <%= image_tag @planet.image, alt: "Apocalypse", class: "planet" %>
+  </marquee>
+<% end %>
+
+<br>
+<!-- <a href="<%= planet_edit_path( @planet.id ) %>">Edit</a> -->
+<%= link_to "Edit", planet_edit_path( @planet.id ) %>
+|
+<%= link_to "Delete", planet_destroy_path( @planet.id)   %>
+<!-- same as
+<a href="/planets/<%= @planet.id %>/delete">Delete<a>
+-->
+<br>
+
+(Last updated <%= @planet.updated_at %>)

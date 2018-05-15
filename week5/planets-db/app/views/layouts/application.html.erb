@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Planets of the Solar System</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1>👻 The Symphony of the Planets 👻</h1>
+    <hr>
+    <%= yield %>
+    <hr>
+    <a href="<%= planets_new_path %>">Add Planet</a>
+    <footer>
+      &copy; Round Boys Productions 2018
+    </footer>
+  </body>
+</html>

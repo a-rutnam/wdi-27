@@ -1,0 +1,25 @@
+<h2>Add Planet</h2>
+
+<!-- Planet
+  id: integer
+  name: string
+  image: text
+  orbit: float
+  diameter: float
+  mass: float
+  temperature: float
+  moons: integer
+  created_at: datetime
+  updated_at: datetime -->
+
+<form action="/planets" method="post">
+  Name: <input type="text" name="name"><br>
+  Image URL: <input type="text" name="image"><br>
+  Orbit: <input type="text" name="orbit"><br>
+  Diameter: <input type="text" name="diameter"><br>
+  Mass: <input type="text" name="mass"><br>
+  Temp: <input type="text" name="temperature"><br>
+  Moons: <input type="text" name="moons"><br>
+  <br>
+  <input type="submit" value="Create Planet">
+</form>
