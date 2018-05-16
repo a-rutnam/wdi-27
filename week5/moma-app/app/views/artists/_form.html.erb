@@ -1,0 +1,43 @@
+
+<% if flash[:errors] %>
+  <div class="error">
+    <ul>
+     <% flash[:errors].each do |key, val| %>
+       <li>
+         <%= key.capitalize %>: <%= val.first %>
+       </li>
+     <% end %>
+   </ul>
+  </div>
+  <br>
+<% end %>
+
+<%= form_for @artist do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %><!-- gives us <input type="text" name="name">  -->
+  </fieldset>
+  <fieldset>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :dob, "Date of Birth" %>
+    <%= f.text_field :dob %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :period %>
+    <%= f.text_field :period %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :roundness %>
+    <%= f.text_field :roundness %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </fieldset>
+
+  <%= f.submit %>
+
+<% end %>

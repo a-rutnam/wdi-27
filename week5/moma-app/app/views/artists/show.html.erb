@@ -1,0 +1,38 @@
+
+<h2><%= @artist.name %></h2>
+
+<p>
+  <strong>Nationality: </strong>
+  <%= @artist.nationality %>
+</p>
+<p>
+  <strong>Date of Birth: </strong>
+  <%= @artist.dob %>
+</p>
+<p>
+  <strong>Period: </strong>
+  : <%= @artist.period %>
+</p>
+<p>
+  <strong>Roundness: </strong>
+    <%= @artist.roundness %>
+</p>
+
+<p>Works:</p>
+<ul>
+  <% @artist.works.each do |work| %>
+    <li>
+      <%= link_to work.title, work_path( work ) %>
+    </li>
+  <% end %>
+</ul>
+
+
+<% if @artist.image.present? %>
+  <%= image_tag @artist.image, alt: @artist.name, class: 'artistPic' %>
+<% end %>
+
+<br>
+<%= link_to 'Edit', edit_artist_path( @artist ) %>
+|
+<%= link_to 'Delete', artist_path( @artist ), method: 'delete' %>

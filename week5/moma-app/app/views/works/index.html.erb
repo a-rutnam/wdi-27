@@ -1,0 +1,12 @@
+<h2>Works Index</h2>
+
+<ul class="index">
+<% @works.each do |work| %>
+  <li>
+    <%= link_to work.title, work_path( work ) %>, <%= work.year %>
+  </li>
+<% end %>
+</ul>
+
+<br>
+<%= link_to 'Add Work', new_work_path %>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MomaApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <h1>MoMA</h1>
+    <nav>
+      <ul id="navbar">
+        <li><%= link_to "Home",    root_path %></li>
+        <li><%= link_to "Artists", artists_path %></li>
+        <li><%= link_to "Works", works_path %></li>
+      </ul>
+    </nav>
+    <hr>
+    <%= yield %>
+    <hr>
+    &copy Round Boys vs Serial Killers, 2018
+  </body>
+</html>

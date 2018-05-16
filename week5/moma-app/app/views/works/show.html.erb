@@ -1,0 +1,23 @@
+
+<h1>
+  <em><%= @work.title %></em>,
+  <%= link_to @work.artist.name, artist_path( @work.artist ) %>,
+  <%= @work.year %>
+</h1>
+
+<p>
+  <strong>Medium</strong>: <%= @work.medium %>
+</p>
+
+<p>
+  <strong>Style</strong>: <%= @work.style %>
+</p>
+
+<% if @work.image.present? %>
+  <%= image_tag @work.image, alt: @work.title, class: 'workMainImage' %>
+<% end %>
+
+<br>
+<%= link_to 'Edit', edit_work_path( @work ) %>
+|
+<%= link_to 'Delete', work_path( @work ), method: 'delete' %>
