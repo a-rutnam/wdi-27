@@ -12,7 +12,7 @@ class SessionController < ApplicationController
       # create a cookie which stores the Rails session, including the user ID
       session[:user_id] = user.id
 
-      redirect_to root_path
+      redirect_to profile_path
     else
       # bad credentials, i.e. unsuccessful login
       # set a flash message which will appear on the next page load only

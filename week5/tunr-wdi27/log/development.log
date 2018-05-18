@@ -7101,3 +7101,2195 @@ Processing by SessionController#new as HTML
 Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-18 10:26:40 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 66ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 10:26:42 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 10:26:53 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 10:26:54 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 10:27:37 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vD+MAdBgKoCaJI535M3k4jpJnVerHpgmEnIchRQ/ahX4yU1bKjK362eDSW1BFCV+XE3yClREKQNGCcEEx+z4xg==", "email"=>"luke@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "luke@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 10:27:37 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 10:29:58 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-18 10:33:49 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JN9Z+otyFbbQeaC3f2oO4mxE/CZGE98x1atsqH7yqi1gKZigcSCI3S3eZ63as89+CkCTe7lJbhSB0LEprSE4/g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 24ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 10:33:49 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 10:38:27 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (13.5ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:39:51 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:42:11 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:42:14 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:42:16 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:42:48 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:49:11 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 57ms (Views: 38.0ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 10:49:35 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cH4UM3FZg3py3+NGURAVN0QTOnhLck5igJTD3C+k/K1NzkKN5f7ZhRsuJe8nYHIuxQjtB53eBzeeY6Oo20BIQ==", "user"=>{"username"=>"Theo", "email"=>"theo@ga.co", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/users_controller.rb:7:in `create'
+Started PUT "/__web_console/repl_sessions/e061adeba73fc8ec924a429e64c24a10" for 127.0.0.1 at 2018-05-18 10:49:56 +1000
+Started PUT "/__web_console/repl_sessions/e061adeba73fc8ec924a429e64c24a10" for 127.0.0.1 at 2018-05-18 10:50:05 +1000
+Started PUT "/__web_console/repl_sessions/e061adeba73fc8ec924a429e64c24a10" for 127.0.0.1 at 2018-05-18 10:50:33 +1000
+Started PUT "/__web_console/repl_sessions/e061adeba73fc8ec924a429e64c24a10" for 127.0.0.1 at 2018-05-18 10:50:42 +1000
+Started POST "/users" for 127.0.0.1 at 2018-05-18 10:54:48 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cH4UM3FZg3py3+NGURAVN0QTOnhLck5igJTD3C+k/K1NzkKN5f7ZhRsuJe8nYHIuxQjtB53eBzeeY6Oo20BIQ==", "user"=>{"username"=>"Theo", "email"=>"theo@ga.co", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "theo@ga.co"], ["username", "Theo"], ["created_at", "2018-05-18 00:54:48.806017"], ["updated_at", "2018-05-18 00:54:48.806017"], ["password_digest", "$2a$10$x9AQjUFoUolXKngTWh9e3OcV4Ago.7F6MNqYRpmoSV6eYuf61cIne"]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/f5e418140b960fb76dd980af23ed0a8b" for 127.0.0.1 at 2018-05-18 10:57:57 +1000
+Started PUT "/__web_console/repl_sessions/f5e418140b960fb76dd980af23ed0a8b" for 127.0.0.1 at 2018-05-18 10:57:59 +1000
+Started PUT "/__web_console/repl_sessions/f5e418140b960fb76dd980af23ed0a8b" for 127.0.0.1 at 2018-05-18 10:57:59 +1000
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Started GET "/users/9" for 127.0.0.1 at 2018-05-18 10:58:10 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 10:58:30 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 10:58:51 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DxLx67HsA8cSOWLS11U9f6BfgUQBEEzais6DSPoy/5VL5DCxS76erO+epchyjPzjxlvuGf5K/f/etV7JKeFtRg==", "user"=>{"username"=>"Theo 2", "email"=>"theo@ga.co", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "theo@ga.co"], ["username", "Theo 2"], ["created_at", "2018-05-18 00:58:51.144290"], ["updated_at", "2018-05-18 00:58:51.144290"], ["password_digest", "$2a$10$REZ7B5oI7ObfwsNn8A.am.ZgIcCFI5bJVxglvUjn2HtuiEs7QH74e"]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 68ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2018-05-18 10:58:51 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (theo@ga.co) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "theo@ga.co"], ["LIMIT", 1]]
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:01:19 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 19.3ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:01:37 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZnD8QXXXMfjWMhPfxuJlTOs0AhdniIK1sxXdjeKgXxsihj0bj4WskyuV1MVjO6TQjTBtSpjSM5DnbgAMMXPNyA==", "user"=>{"username"=>"t", "email"=>"theo@ga.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "theo@ga.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "theo@ga.com"], ["username", "t"], ["created_at", "2018-05-18 01:01:37.922910"], ["updated_at", "2018-05-18 01:01:37.922910"], ["password_digest", "$2a$10$UkQRUGZYmqPKDozN0VycCutjhOdVhiBbKED3h85KLloRaWeymJyRK"]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 66ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2018-05-18 11:01:37 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "theo@ga.co"], ["created_at", "2018-05-18 01:02:16.099019"], ["updated_at", "2018-05-18 01:02:16.099019"], ["password_digest", "$2a$10$NVlFv1H2KRf5IkN.soPRpOC27aNZ4vNGdrgNZOBOVwKaBMpYaDSmS"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "theo@ga.co"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:03:08 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 22.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:03:16 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qrjmx+BkJo1F4QWlAgcqtm2IIiCrGq7+VlSQCHAkeuPuTiedGja75rhGwr+n3usqC4xNfVRAH9sCL02Jo/foMA==", "user"=>{"username"=>"dd", "email"=>"theo@ga.co", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "theo@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started PUT "/__web_console/repl_sessions/fa14bb7db9a1d6fead8242d74ebe45db" for 127.0.0.1 at 2018-05-18 11:03:34 +1000
+Started PUT "/__web_console/repl_sessions/fa14bb7db9a1d6fead8242d74ebe45db" for 127.0.0.1 at 2018-05-18 11:03:34 +1000
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "theo@ga.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:09:02 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qrjmx+BkJo1F4QWlAgcqtm2IIiCrGq7+VlSQCHAkeuPuTiedGja75rhGwr+n3usqC4xNfVRAH9sCL02Jo/foMA==", "user"=>{"username"=>"dd", "email"=>"theo@ga.co", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "theo@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 76ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:09:02 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:09:55 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@b.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@b.com"], ["created_at", "2018-05-18 01:12:29.339028"], ["updated_at", "2018-05-18 01:12:29.339028"], ["password_digest", "$2a$10$F9i4RKJ43v3QIz7Qr64pEO9O7TgVdNZPJIRUknyeJuRMQ6Jvc/JQ6"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:13:11 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:13:34 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jUREWqOYaDENKBGfOJaI5FCi0qMt4eVt+TLDNUCqI+bJsoUAWcr1WvCP1oWdT0l4Nqa9/tK7VEitSR60k3mxNQ==", "user"=>{"username"=>"ttt", "email"=>"aaa@bbb.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@bbb.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "aaa@bbb.com"], ["username", "ttt"], ["created_at", "2018-05-18 01:13:34.097204"], ["updated_at", "2018-05-18 01:13:34.097204"], ["password_digest", "$2a$10$jhNdUDxbst5RNdaM3FQBFegYqT8zbFy.YIlMqrrohzYBBAHY4yzLe"]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 63ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2018-05-18 11:13:34 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:14:06 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jUREWqOYaDENKBGfOJaI5FCi0qMt4eVt+TLDNUCqI+bJsoUAWcr1WvCP1oWdT0l4Nqa9/tK7VEitSR60k3mxNQ==", "user"=>{"username"=>"ttt", "email"=>"aaa@bbb.commm", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@bbb.commm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "aaa@bbb.commm"], ["username", "ttt"], ["created_at", "2018-05-18 01:14:07.006757"], ["updated_at", "2018-05-18 01:14:07.006757"], ["password_digest", "$2a$10$4UpOsAKtzc2N8ihOhimNyOQbOhC.LdcybUkBEGHVMM/rBwtMs1GDe"]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 64ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2018-05-18 11:14:07 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:15:46 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jUREWqOYaDENKBGfOJaI5FCi0qMt4eVt+TLDNUCqI+bJsoUAWcr1WvCP1oWdT0l4Nqa9/tK7VEitSR60k3mxNQ==", "user"=>{"username"=>"ttt", "email"=>"aaa@bbb.commmmmm", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@bbb.commmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 74ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:15:46 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:16:10 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5UsyGA4tTPFLW88BTddcxG35Mmn6NdOqi7J7+VTMW4GhvfNC9H/Rmrb8CBvoDp1YC/1dNAVvYo/fyaZ4hx/JUg==", "user"=>{"username"=>"tttt", "email"=>"t@t.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t@t.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "t@t.com"], ["username", "tttt"], ["created_at", "2018-05-18 01:16:11.027904"], ["updated_at", "2018-05-18 01:16:11.027904"], ["password_digest", "$2a$10$nDvBsdi6FGYSnXvna/W6aODlB1kSJCGfDBG79wnUCMA7c.VxAojA."]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/16
+Completed 302 Found in 64ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/16" for 127.0.0.1 at 2018-05-18 11:16:11 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:32:16 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-05-18 11:33:22 +1000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 24.9ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-05-18 11:36:47 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"es/ovpjAqg0wOB5v3y2puzInFjmYKT8Yok+M6npggOc+OSnkYpI3Zs2f2XV69GgnVCN5ZGdzjj32NFFrqbMSNA==", "user"=>{"username"=>"Dazza", "email"=>"dazz@dazzasworld.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dazz@dazzasworld.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "dazz@dazzasworld.com"], ["username", "Dazza"], ["created_at", "2018-05-18 01:36:48.043062"], ["updated_at", "2018-05-18 01:36:48.043062"], ["password_digest", "$2a$10$k.Q7ELaWc3rwWK5gJG5TK.axnWwDHZ9Ous4.BysPKIlHs3m3Nz4Tu"]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:7
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 75ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2018-05-18 11:36:48 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-18 11:38:29 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8XACpl+tQD4J9Rey/Z0T6uP/X11Epvmk7YxTRguCc9y1hsP8pf/dVfRS0KhYRNJ2hfswALv8SIG5947H2FHhDw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:38:29 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:38:40 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAS0e6fDAH6asgOBDzktOV6hdvQxFbt4pBpHhxf/qGl08nUhXZGdFWcVxJuq4OylOKUZqc5PCl3wYZoGxCw6ug==", "email"=>"dazz@dazzasworld.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dazz@dazzasworld.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:38:40 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:39:25 +1000
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:39:29 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7RejgGqdp8M/3nA+eoUgvvCGqBtdunTJhyTlYBaIpkip4WLakM86qMJ5tyTfXOEiloLHRqLgxezTXzjhxVs0mw==", "email"=>"dazz@dazzasworld.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dazz@dazzasworld.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-18 11:39:29 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-18 11:39:34 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Psg5/EW0sMUMUsiIHz13JqsExf60XMSgbWA0nZOD0V96Pvimv+YtrvH1D5K65La6zQCqo0sGdYU5G+kcQFBDjA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:39:34 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 11:40:44 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JmUmdo9ZJICpB0nd3hL629ZfNxjebguGQT5SDfVswk5ik+csdQu561Sgjsd7yztHsFtYRSE0uqMVRY+MJr9QnQ==", "email"=>"dazz@dazzasworld.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dazz@dazzasworld.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to http://localhost:3000/users/17
+Completed 302 Found in 71ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/users/17" for 127.0.0.1 at 2018-05-18 11:40:44 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 11:42:07 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (4.0ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 11:42:23 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [18 times] (5.1ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:44:48 +1000
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 19.6ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/login" for 127.0.0.1 at 2018-05-18 11:44:56 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Qz6gz5j9IDu3Nczc2l1nW2gbYXqHX0wLs9o8EmqE/BMHyGGVYq+9UEqSC8Z/hKbHDh8OJ3gF/S7noeGTuVduwA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:44:56 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:44:59 +1000
+Processing by UsersController#profile as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:45:27 +1000
+Processing by UsersController#profile as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:45:28 +1000
+Processing by UsersController#profile as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:46:10 +1000
+Processing by UsersController#profile as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <h1>Profile: <%= @user.username %></h1>
+    2: 
+    3: <p>Email: <%= @user.email %></p>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__2603545405484691756_70358172713540'
+app/controllers/users_controller.rb:27:in `profile'
+Started PUT "/__web_console/repl_sessions/eb352096a7088294ce69b04194c849e7" for 127.0.0.1 at 2018-05-18 11:46:28 +1000
+Started PUT "/__web_console/repl_sessions/eb352096a7088294ce69b04194c849e7" for 127.0.0.1 at 2018-05-18 11:46:30 +1000
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:47:36 +1000
+Processing by UsersController#profile as HTML
+Redirected to http://localhost:3000/login
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/users_controller.rb:29:in `profile'
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:48:24 +1000
+Processing by UsersController#profile as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:48:24 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:48:29 +1000
+Processing by UsersController#profile as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:48:29 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:50:00 +1000
+Processing by UsersController#profile as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:50:00 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2018-05-18 11:50:16 +1000
+Processing by UsersController#profile as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 11:50:16 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:18 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (5.2ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:29 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (8.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:30 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:30 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.1ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:31 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (8.2ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:31 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.1ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:41 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (7.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:41 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (5.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:48 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.3ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:49 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (7.0ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:50 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:50 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.3ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:50 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (6.0ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.2ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:00:50 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (8.2ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-05-18 12:01:13 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [26 times] (7.9ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionpack-5.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/info/routes.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:09:39 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  Rendered mixtapes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 74ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:09:46 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  Rendered mixtapes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:09:51 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  Rendered mixtapes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:10:11 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (1.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 35ms (Views: 25.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:10:16 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/textchimp/wdi/classwork/week5/tunr-wdi27/app/views/mixtapes/show.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+( if @mixtape.image.present? );@output_buffer.safe_append='
+                              ^
+/Users/textchimp/wdi/classwork/week5/tunr-wdi27/app/views/mixtapes/show.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/textchimp/wdi/classwork/week5/tunr-wdi27/app/views/mixtapes/show.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/textchimp/wdi/classwork/week5/tunr-wdi27/app/views/mixtapes/show.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/mixtapes/show.html.erb:3: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/mixtapes/show.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+app/views/mixtapes/show.html.erb:14: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/mixtapes/show.html.erb:16: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:10:36 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mixtapes/14/edit" for 127.0.0.1 at 2018-05-18 12:10:41 +1000
+Processing by MixtapesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/edit.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.8ms)
+  Rendered mixtapes/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:10:54 +1000
+Processing by MixtapesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0ZrJgC9Ue0j368f+3g49fNFdHNET0gbO7fc/i8lK6heVbAja1QbmIwpMAOR71/zgt1lzjOyIt+u5jOIKGpl4xA==", "mixtape"=>{"title"=>"Driving Songs2", "image"=>"http://fillmurray.com/200/200"}, "commit"=>"Update Mixtape", "id"=>"14"}
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:25
+  [1m[36mMixtape Update (0.4ms)[0m  [1m[33mUPDATE "mixtapes" SET "title" = $1, "image" = $2, "updated_at" = $3 WHERE "mixtapes"."id" = $4[0m  [["title", "Driving Songs2"], ["image", "http://fillmurray.com/200/200"], ["updated_at", "2018-05-18 02:10:54.409616"], ["id", 14]]
+  ↳ app/controllers/mixtapes_controller.rb:25
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:25
+Redirected to http://localhost:3000/mixtapes/14
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:10:54 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:11:02 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes/16" for 127.0.0.1 at 2018-05-18 12:11:04 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mixtapes/new" for 127.0.0.1 at 2018-05-18 12:11:44 +1000
+Processing by MixtapesController#new as HTML
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.3ms)
+  Rendered mixtapes/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mixtapes" for 127.0.0.1 at 2018-05-18 12:12:11 +1000
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1I5W3WJiNotEFWpp94YQDi/c6AfOuQJXP8NmgZ/qF3CQeJeHmDCr4LmyrXNSX9GSSdiHWjHjs3JruLsATDmFow==", "mixtape"=>{"title"=>"Dazza's Bachelor Pad", "image"=>"http://fillmurray.com/400/400"}, "commit"=>"Create Mixtape"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[36mMixtape Create (0.4ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Dazza's Bachelor Pad"], ["image", "http://fillmurray.com/400/400"], ["created_at", "2018-05-18 02:12:11.717176"], ["updated_at", "2018-05-18 02:12:11.717176"]]
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:12:11 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes/17" for 127.0.0.1 at 2018-05-18 12:12:16 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/mixtapes/17" for 127.0.0.1 at 2018-05-18 12:12:23 +1000
+Processing by MixtapesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zafCzX7r9ywvwC/7QRRU1ZbeScdZ28c8RimANHaE8VqJUQOXhLlqR9Jn6OHkzZVJ8NommqaBdhkSUl21pVdjiQ==", "id"=>"17"}
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:30
+  [1m[36mMixtape::HABTM_Songs Destroy (0.4ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = $1[0m  [["mixtape_id", 17]]
+  ↳ app/controllers/mixtapes_controller.rb:30
+  [1m[36mMixtape Destroy (0.4ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/mixtapes_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:30
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 37ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:12:23 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mMixtape Load (0.9ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+Started GET "/mixtapes/17" for 127.0.0.1 at 2018-05-18 12:12:55 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mixtape with 'id'=17):
+  
+app/controllers/mixtapes_controller.rb:12:in `show'
+Started POST "/mixtapes" for 127.0.0.1 at 2018-05-18 12:12:59 +1000
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1I5W3WJiNotEFWpp94YQDi/c6AfOuQJXP8NmgZ/qF3CQeJeHmDCr4LmyrXNSX9GSSdiHWjHjs3JruLsATDmFow==", "mixtape"=>{"title"=>"Dazza's Bachelor Pad", "image"=>"http://fillmurray.com/400/400"}, "commit"=>"Create Mixtape"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[36mMixtape Create (0.3ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Dazza's Bachelor Pad"], ["image", "http://fillmurray.com/400/400"], ["created_at", "2018-05-18 02:12:59.338460"], ["updated_at", "2018-05-18 02:12:59.338460"]]
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:12:59 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mMixtape Load (0.5ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+Started GET "/login" for 127.0.0.1 at 2018-05-18 12:13:24 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2018-05-18 12:13:45 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nXX1xysBO7K8Jj+d01vDhtkanX4sxPQIoCLgq+kiHOHZgzSd0VOm2UGB+Id2ggIavx7yI9OeRS30WT0qOvGOMg==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 73ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-05-18 12:13:45 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/new" for 127.0.0.1 at 2018-05-18 12:14:08 +1000
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.5ms)
+  Rendered mixtapes/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/mixtapes" for 127.0.0.1 at 2018-05-18 12:14:28 +1000
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u056DZ6ozek9cIb1hLyIeUvS2gUzvEIHsWrIGNbKpun/uLtXZPpQgsDXQe8hZUnlLda1WMzm8yLlERWZBRk0Og==", "mixtape"=>{"title"=>"Jogging Hits", "image"=>"http://fillmurray.com/500/500"}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[36mMixtape Create (0.3ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Jogging Hits"], ["image", "http://fillmurray.com/500/500"], ["created_at", "2018-05-18 02:14:28.144281"], ["updated_at", "2018-05-18 02:14:28.144281"]]
+  ↳ app/controllers/mixtapes_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:7
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:14:28 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/19" for 127.0.0.1 at 2018-05-18 12:14:31 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:12
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMixtape Load (0.6ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+Started POST "/mixtapes" for 127.0.0.1 at 2018-05-18 12:19:17 +1000
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u056DZ6ozek9cIb1hLyIeUvS2gUzvEIHsWrIGNbKpun/uLtXZPpQgsDXQe8hZUnlLda1WMzm8yLlERWZBRk0Og==", "mixtape"=>{"title"=>"Jogging Hits BY GRANT", "image"=>"http://fillmurray.com/400/500"}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:10
+  [1m[36mMixtape Create (0.3ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "image", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Jogging Hits BY GRANT"], ["image", "http://fillmurray.com/400/500"], ["created_at", "2018-05-18 02:19:17.431615"], ["updated_at", "2018-05-18 02:19:17.431615"], ["user_id", 6]]
+  ↳ app/controllers/mixtapes_controller.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:10
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 29ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:19:17 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."user_id" = $1[0m  [["user_id", 6]]
+Started DELETE "/login" for 127.0.0.1 at 2018-05-18 12:20:19 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2ZNNitCJEHrZ87TWokmng37jHs/BXW1O9HacMvihHY+dZYzQKtuNESRUc8wHkGYfGOdxkj4H3GugDUGzK3KPXA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 12:20:20 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes/new" for 127.0.0.1 at 2018-05-18 12:20:25 +1000
+Processing by MixtapesController#new as HTML
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.4ms)
+  Rendered mixtapes/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mixtapes" for 127.0.0.1 at 2018-05-18 12:20:31 +1000
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hf7KQtonQ0gZJbkVcp0ZyaCczti3Y7bi7V0SDPs6rhjBCAsYIHXeI+SCfg/XRNhVxpihhUg5B8e5Js+NKOk8yw==", "mixtape"=>{"title"=>"sdfsdf", "image"=>""}, "commit"=>"Create Mixtape"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:10
+  [1m[36mMixtape Create (0.3ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "sdfsdf"], ["image", ""], ["created_at", "2018-05-18 02:20:31.160365"], ["updated_at", "2018-05-18 02:20:31.160365"]]
+  ↳ app/controllers/mixtapes_controller.rb:10
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:10
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:20:31 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" ORDER BY "mixtapes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:29:20 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.7ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 32ms (Views: 20.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/mixtapes/new" for 127.0.0.1 at 2018-05-18 12:29:25 +1000
+Processing by MixtapesController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 12:29:25 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes/new" for 127.0.0.1 at 2018-05-18 12:30:23 +1000
+Processing by MixtapesController#new as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 12:30:23 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:30:26 +1000
+Processing by MixtapesController#index as HTML
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 27ms (Views: 19.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-18 12:30:29 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-05-18 12:30:35 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sZOCsFsicGSypgTohTCRsKYnsqJ/O9FN0cZBjjkxBuv1ZUPqoXDtD08Bw/Ig6VAswCPd/4BhYGiFvZwP6uKUOA==", "email"=>"grant@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "grant@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:8
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 84ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2018-05-18 12:30:35 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:31:03 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 49ms (Views: 29.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:31:27 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:31:35 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/18/edit" for 127.0.0.1 at 2018-05-18 12:32:03 +1000
+Processing by MixtapesController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:27
+  Rendering mixtapes/edit.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.5ms)
+  Rendered mixtapes/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:32:05 +1000
+Processing by MixtapesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ed6IzES0b6fCll1kIl2hniT692iTyL6kup/zUGYET1hVKEmWvubyzD8xmn6HhGACQv6YNWySD4Hu5C7Rtdfdiw==", "mixtape"=>{"title"=>"Dazza's Bachelor Pad22", "image"=>"http://fillmurray.com/400/400"}, "commit"=>"Update Mixtape", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:32
+  [1m[36mMixtape Update (0.4ms)[0m  [1m[33mUPDATE "mixtapes" SET "title" = $1, "updated_at" = $2 WHERE "mixtapes"."id" = $3[0m  [["title", "Dazza's Bachelor Pad22"], ["updated_at", "2018-05-18 02:32:05.642425"], ["id", 18]]
+  ↳ app/controllers/mixtapes_controller.rb:32
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:32
+Redirected to http://localhost:3000/mixtapes/18
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:32:05 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:34:21 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:34:30 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/20/edit" for 127.0.0.1 at 2018-05-18 12:34:33 +1000
+Processing by MixtapesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:27
+  Rendering mixtapes/edit.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.5ms)
+  Rendered mixtapes/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:34:57 +1000
+Processing by MixtapesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bdg6QHCSPqZ20HlkhUbOETiv8l1e4kElx0FEDOPkr9spLvsaisCjzYt3vn4gnw+NXqudAKG48ACTOpmNMDc9CA==", "mixtape"=>{"title"=>"Jogging Hits BY GRANT", "image"=>"http://fillmurray.com/400/500"}, "commit"=>"Update Mixtape", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:32
+  [1m[36mMixtape Update (0.3ms)[0m  [1m[33mUPDATE "mixtapes" SET "title" = $1, "image" = $2, "updated_at" = $3 WHERE "mixtapes"."id" = $4[0m  [["title", "Jogging Hits BY GRANT"], ["image", "http://fillmurray.com/400/500"], ["updated_at", "2018-05-18 02:34:57.921197"], ["id", 18]]
+  ↳ app/controllers/mixtapes_controller.rb:32
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:32
+Redirected to http://localhost:3000/mixtapes/18
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:34:57 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:35:03 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.8ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:38:16 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 60ms (Views: 22.8ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:38:20 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (1.4ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:38:22 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:38:24 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:38:25 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/20/edit" for 127.0.0.1 at 2018-05-18 12:38:32 +1000
+Processing by MixtapesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:27
+  Rendering mixtapes/edit.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.7ms)
+  Rendered mixtapes/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:38:45 +1000
+Processing by MixtapesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NC2suGtZja6HRQqq6iH3pvIF+ccBcFYy1QfBncsquYdw223ikQsQxXrizbBP+DY6lAGWmv4q5xeBfBwcGPkrVA==", "mixtape"=>{"title"=>"Jogging Hits BY GRANT HAAAACKED", "image"=>"http://fillmurray.com/400/500"}, "commit"=>"Update Mixtape", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:38:45 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:39:09 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:39:10 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:39:11 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:19
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:41:58 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 43ms (Views: 28.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:45:30 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 53ms (Views: 19.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:45:34 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:45:36 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mixtapes/20/edit" for 127.0.0.1 at 2018-05-18 12:45:38 +1000
+Processing by MixtapesController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:28
+  Rendering mixtapes/edit.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.7ms)
+  Rendered mixtapes/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:45:46 +1000
+Processing by MixtapesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXqnXCtm5H2UpH0o6WEQYS3itjwhqzdM32QQoWHtoMvNjGYG0TR5FmkDujJMuNH9S+bZYd7xhmmLH80gsj4yGA==", "mixtape"=>{"title"=>"asdasd", "image"=>"http://fillmurray.com/400/500"}, "commit"=>"Update Mixtape", "id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:32
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:45:46 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:45:50 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:45:52 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:45:53 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:45:57 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:46:14 +1000
+Processing by MixtapesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0+vZylfopsN35xtqgrDZkDDaw1p9pRDhgEDR67vl1ACXHRiQrbo7qIpA3HAnaRgMVt6sB4L/ocTUOwxqaDZG0w==", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:40
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:46:14 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:46:19 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/mixtapes/20" for 127.0.0.1 at 2018-05-18 12:46:21 +1000
+Processing by MixtapesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XQOD2eU5Nbr7QDOUZ1dI3YK3O+jj2NNH+UvZKDo9FWoZ9UKDH2uo0Qbn9I7CjolB5LNUtRyCYmKtMASp6e6HuQ==", "id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:43
+  [1m[36mMixtape::HABTM_Songs Destroy (0.3ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = $1[0m  [["mixtape_id", 20]]
+  ↳ app/controllers/mixtapes_controller.rb:43
+  [1m[36mMixtape Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/mixtapes_controller.rb:43
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:43
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 24ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:46:21 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes/19" for 127.0.0.1 at 2018-05-18 12:46:25 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.1ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:46:27 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:46:29 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:46:34 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/19" for 127.0.0.1 at 2018-05-18 12:46:37 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:46:51 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 12:46:54 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:47:05 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."user_id" = $1[0m  [["user_id", 6]]
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:47:12 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/14/edit" for 127.0.0.1 at 2018-05-18 12:47:15 +1000
+Processing by MixtapesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:28
+  Rendering mixtapes/edit.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.6ms)
+  Rendered mixtapes/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:47:17 +1000
+Processing by MixtapesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXUbThKb+5LHmSCAqMMFWEkiU3fKi6U3MeMjIPWIYueBg9oU6Mlm+To+55oNGsTELyY8KjXRFBJlmP6hJlvwNA==", "mixtape"=>{"title"=>"Driving Songs2222", "image"=>"http://fillmurray.com/200/200"}, "commit"=>"Update Mixtape", "id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:35
+  [1m[36mMixtape Update (0.3ms)[0m  [1m[33mUPDATE "mixtapes" SET "title" = $1, "updated_at" = $2 WHERE "mixtapes"."id" = $3[0m  [["title", "Driving Songs2222"], ["updated_at", "2018-05-18 02:47:17.648690"], ["id", 14]]
+  ↳ app/controllers/mixtapes_controller.rb:35
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:35
+Redirected to http://localhost:3000/mixtapes/14
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 12:47:17 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:20
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 12:47:22 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mixtapes/15" for 127.0.0.1 at 2018-05-18 14:17:21 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:53
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 81ms (Views: 36.9ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:17:23 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 14:17:24 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:53
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:17:26 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/18" for 127.0.0.1 at 2018-05-18 14:20:45 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.5ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 60ms (Views: 30.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:20:47 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mixtapes/19" for 127.0.0.1 at 2018-05-18 14:20:48 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:20:51 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.4ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 14:20:59 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/mixtapes/14" for 127.0.0.1 at 2018-05-18 14:21:03 +1000
+Processing by MixtapesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wlkgUnnYF4f48Lw5oX/AqS+8MRr2lW0czWlTyX2P27aGr+EIg4qK7AVXeyMEpgE1SbheRwnP3DmZEo5IrlxJZQ==", "id"=>"14"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[36mMixtape::HABTM_Songs Destroy (0.8ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = $1[0m  [["mixtape_id", 14]]
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[36mMixtape Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:40
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 17ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:21:03 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/14" for 127.0.0.1 at 2018-05-18 14:21:05 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Mixtape with 'id'=14):
+  
+app/controllers/mixtapes_controller.rb:50:in `get_mixtape'
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:21:09 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mixtapes/new" for 127.0.0.1 at 2018-05-18 14:21:13 +1000
+Processing by MixtapesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/new.html.erb within layouts/application
+  Rendered mixtapes/_form.html.erb (1.9ms)
+  Rendered mixtapes/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/mixtapes" for 127.0.0.1 at 2018-05-18 14:21:18 +1000
+Processing by MixtapesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S3/PINV/ujx7s2JJ3Onw8RCgVXl/TNr7pV9q14JFrWIPiQ56Ly0nV4YUpVN5MDFtdqQ6JIAWa97xJLdWUZY/sQ==", "mixtape"=>{"title"=>"graaaaaaant", "image"=>""}, "commit"=>"Create Mixtape"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:16
+  [1m[36mMixtape Create (0.4ms)[0m  [1m[32mINSERT INTO "mixtapes" ("title", "image", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "graaaaaaant"], ["image", ""], ["created_at", "2018-05-18 04:21:18.054827"], ["updated_at", "2018-05-18 04:21:18.054827"], ["user_id", 6]]
+  ↳ app/controllers/mixtapes_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:16
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:21:18 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.3ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/22" for 127.0.0.1 at 2018-05-18 14:21:19 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mixtapes/22" for 127.0.0.1 at 2018-05-18 14:22:43 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  Rendering mixtapes/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mixtapes/show.html.erb:9
+  Rendered mixtapes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/mixtapes/22" for 127.0.0.1 at 2018-05-18 14:22:45 +1000
+Processing by MixtapesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p7zVILCZAk9fafOV30lgEbed/jRNv2a9w95LgHce2A3jShR6SsufJKLONI96kKGN0ZmRabLl15iXpZYBpM1K3g==", "id"=>"22"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[36mMixtape::HABTM_Songs Destroy (0.4ms)[0m  [1m[31mDELETE FROM "mixtapes_songs" WHERE "mixtapes_songs"."mixtape_id" = $1[0m  [["mixtape_id", 22]]
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[36mMixtape Destroy (0.3ms)[0m  [1m[31mDELETE FROM "mixtapes" WHERE "mixtapes"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/mixtapes_controller.rb:40
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mixtapes_controller.rb:40
+Redirected to http://localhost:3000/mixtapes
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/mixtapes" for 127.0.0.1 at 2018-05-18 14:22:45 +1000
+Processing by MixtapesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  Rendering mixtapes/index.html.erb within layouts/application
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT "mixtapes".* FROM "mixtapes"[0m
+  ↳ app/views/mixtapes/index.html.erb:4
+  Rendered mixtapes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mixtapes/21" for 127.0.0.1 at 2018-05-18 14:22:57 +1000
+Processing by MixtapesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20
+  [1m[36mMixtape Load (0.2ms)[0m  [1m[34mSELECT  "mixtapes".* FROM "mixtapes" WHERE "mixtapes"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/mixtapes_controller.rb:50
+  Rendering mixtapes/show.html.erb within layouts/application
+  Rendered mixtapes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+

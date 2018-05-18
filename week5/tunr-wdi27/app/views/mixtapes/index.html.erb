@@ -1,0 +1,9 @@
+<h1>All Mixtapes</h1>
+
+<ul>
+<% @mixtapes.each do |m| %>
+  <li>
+    <%= link_to m.title, mixtape_path( m ) %>
+  </li>
+<% end %>
+</ul>

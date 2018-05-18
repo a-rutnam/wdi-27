@@ -2,6 +2,14 @@ class ApplicationController < ActionController::Base
 
   before_action :fetch_user
 
+  def check_if_logged_in
+    unless @current_user.present?
+      flash[:error] = "You must be logged in to view that page."
+      redirect_to login_path
+    end
+  end
+
+
   private
 
   def fetch_user

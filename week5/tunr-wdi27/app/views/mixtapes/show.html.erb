@@ -1,0 +1,13 @@
+<h1>Mixtape: <%= @mixtape.title %></h1>
+
+<% if @mixtape.image.present? %>
+  <%= image_tag @mixtape.image %>
+<% end %>
+
+<br>
+
+<% if @current_user.present? && @mixtape.user == @current_user %>
+  <%= link_to "Edit",  edit_mixtape_path( @mixtape ) %>
+  |
+  <%= link_to "Delete",  mixtape_path( @mixtape ), method: :delete %>
+<% end %>
