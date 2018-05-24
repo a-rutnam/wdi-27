@@ -1,0 +1,13 @@
+<h1>
+  Search Results for "<%= params[:query] %>"
+</h1>
+<hr>
+
+<ul>
+<% @results.each do |dog| %>
+  <li>
+    <%= link_to dog.name, dog %><br>
+    <%= dog.bio %>
+  </li>
+<% end %>
+</ul>

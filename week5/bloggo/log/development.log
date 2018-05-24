@@ -1,0 +1,890 @@
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE DATABASE "bloggo_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "bloggo_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (132.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bloggo_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (116.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bloggo_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (363.1ms)[0m  [1m[35mCREATE DATABASE "bloggo_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (249.3ms)[0m  [1m[35mCREATE DATABASE "bloggo_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1386742417525595340)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateDogs (20180523014117)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "dogs" ("id" bigserial primary key, "name" character varying, "roundness" integer, "bio" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180523014117_create_dogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180523014117"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-23 01:41:57.568972"], ["updated_at", "2018-05-23 01:41:57.568972"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1386742417525595340)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 11:42:07 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.9ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 463ms (Views: 454.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/dogs/new" for 127.0.0.1 at 2018-05-23 11:42:10 +1000
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (17.7ms)
+  Rendered dogs/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 40ms (Views: 30.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/dogs" for 127.0.0.1 at 2018-05-23 11:42:17 +1000
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4NeNT/a0CK5akF5IEoGLmSz1xPVKj6nq2GbUrDaTLiSOme9Gv8Kx321WZwkRRwAPCjbk0AjOgcGsnxDoeCQpFg==", "dog"=>{"name"=>"Gary", "roundness"=>"3", "bio"=>"Loves to run"}, "commit"=>"Create Dog"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/dogs_controller.rb:30
+  [1m[36mDog Create (0.6ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "roundness", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gary"], ["roundness", 3], ["bio", "Loves to run"], ["created_at", "2018-05-23 01:42:17.786733"], ["updated_at", "2018-05-23 01:42:17.786733"]]
+  ↳ app/controllers/dogs_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/dogs_controller.rb:30
+Redirected to http://localhost:3000/dogs/1
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/dogs/1" for 127.0.0.1 at 2018-05-23 11:42:17 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 11:42:19 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/new" for 127.0.0.1 at 2018-05-23 11:43:51 +1000
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (2.7ms)
+  Rendered dogs/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dogs" for 127.0.0.1 at 2018-05-23 11:44:01 +1000
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vDFgogU4niI4LTkD0beNoGMQxx70t3hF3Upa9RYNLiHSfwKrTE4nUw/rAELScQY2RdPnO7b2UG6ps56xWLopEw==", "dog"=>{"name"=>"Dazza", "roundness"=>"1", "bio"=>"Stop complaining"}, "commit"=>"Create Dog"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/dogs_controller.rb:30
+  [1m[36mDog Create (0.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "roundness", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dazza"], ["roundness", 1], ["bio", "Stop complaining"], ["created_at", "2018-05-23 01:44:01.131247"], ["updated_at", "2018-05-23 01:44:01.131247"]]
+  ↳ app/controllers/dogs_controller.rb:30
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/dogs_controller.rb:30
+Redirected to http://localhost:3000/dogs/2
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dogs/2" for 127.0.0.1 at 2018-05-23 11:44:01 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 11:44:02 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/1/edit" for 127.0.0.1 at 2018-05-23 11:44:03 +1000
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (2.6ms)
+  Rendered dogs/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 11:44:05 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1386742417525595340)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddLatitudeAndLongitudeToDogs (20180523014816)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "dogs" ADD "latitude" float[0m
+  ↳ db/migrate/20180523014816_add_latitude_and_longitude_to_dogs.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "dogs" ADD "longitude" float[0m
+  ↳ db/migrate/20180523014816_add_latitude_and_longitude_to_dogs.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180523014816"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1386742417525595340)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1386742417525595340)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddAddressToDogs (20180523014951)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "dogs" ADD "address" text[0m
+  ↳ db/migrate/20180523014951_add_address_to_dogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180523014951"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1386742417525595340)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Create (1.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at", "latitude", "longitude", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ruby"], ["created_at", "2018-05-23 01:54:46.529616"], ["updated_at", "2018-05-23 01:54:46.529616"], ["latitude", -33.8713221], ["longitude", 151.2046436], ["address", "1 Market St, Sydney"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Create (0.7ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at", "address") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Frederick"], ["created_at", "2018-05-23 01:55:41.179161"], ["updated_at", "2018-05-23 01:55:41.179161"], ["address", "1 Belgrave St, Manly"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Create (0.7ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at", "latitude", "longitude", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Frederick"], ["created_at", "2018-05-23 02:00:51.209335"], ["updated_at", "2018-05-23 02:00:51.209335"], ["latitude", -33.797987], ["longitude", 151.284738], ["address", "1 Belgrave St, Manly"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Create (0.6ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at", "latitude", "longitude", "address") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Frederick"], ["created_at", "2018-05-23 02:01:03.485914"], ["updated_at", "2018-05-23 02:01:03.485914"], ["latitude", -33.789174], ["longitude", 151.255022], ["address", "10 Daisy St, Dee Why"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDog Load (0.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."latitude" IS NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Destroy (0.4ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[36mDog Load (9.8ms)[0m  [1m[34mSELECT dogs.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.858481 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.858481 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.153243 - dogs.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((dogs.longitude - 151.153243) / 57.2957795), ((dogs.latitude - -33.858481) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "dogs" WHERE (dogs.latitude BETWEEN -33.88742735662217 AND -33.829534643377826 AND dogs.longitude BETWEEN 151.11838535216137 AND 151.18810064783864 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.858481 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.858481 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.153243 - dogs.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 2) ORDER BY distance ASC[0m
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mDog Load (1.5ms)[0m  [1m[34mSELECT dogs.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.8713221 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.8713221 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.2046436 - dogs.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((dogs.longitude - 151.2046436) / 57.2957795), ((dogs.latitude - -33.8713221) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "dogs" WHERE (dogs.latitude BETWEEN -33.90026845662217 AND -33.84237574337783 AND dogs.longitude BETWEEN 151.16978070907808 AND 151.2395064909219 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.8713221 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.8713221 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.2046436 - dogs.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 2) ORDER BY distance ASC[0m
+  [1m[36mDog Load (1.5ms)[0m  [1m[34mSELECT dogs.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.8713221 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.8713221 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.2046436 - dogs.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((dogs.longitude - 151.2046436) / 57.2957795), ((dogs.latitude - -33.8713221) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "dogs" WHERE (dogs.latitude BETWEEN -33.94368799155542 AND -33.79895620844458 AND dogs.longitude BETWEEN 151.11748637269517 AND 151.29180082730483 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.8713221 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.8713221 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.2046436 - dogs.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 5) ORDER BY distance ASC[0m
+  [1m[36mDog Load (1.5ms)[0m  [1m[34mSELECT dogs.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.8713221 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.8713221 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.2046436 - dogs.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((dogs.longitude - 151.2046436) / 57.2957795), ((dogs.latitude - -33.8713221) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "dogs" WHERE (dogs.latitude BETWEEN -33.98710752648868 AND -33.75553667351132 AND dogs.longitude BETWEEN 151.06519203631228 AND 151.3440951636877 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.8713221 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.8713221 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.2046436 - dogs.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 8) ORDER BY distance ASC[0m
+  [1m[36mDog Load (1.8ms)[0m  [1m[34mSELECT dogs.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.869984 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.869984 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.206899 - dogs.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((dogs.longitude - 151.206899) / 57.2957795), ((dogs.latitude - -33.869984) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "dogs" WHERE (dogs.latitude BETWEEN -33.98576942648868 AND -33.754198573511324 AND dogs.longitude BETWEEN 151.0674496223445 AND 151.3463483776555 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.869984 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.869984 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.206899 - dogs.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 8) ORDER BY distance ASC[0m
+  [1m[36mDog Load (1.3ms)[0m  [1m[34mSELECT dogs.*, 3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.869984 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.869984 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.206899 - dogs.longitude) * PI() / 180 / 2), 2))) AS distance, MOD(CAST((ATAN2( ((dogs.longitude - 151.206899) / 57.2957795), ((dogs.latitude - -33.869984) / 57.2957795)) * 57.2957795) + 360 AS decimal), 360) AS bearing FROM "dogs" WHERE (dogs.latitude BETWEEN -33.898930356622174 AND -33.84103764337783 AND dogs.longitude BETWEEN 151.1720366555861 AND 151.24176134441387 AND (3958.755864232 * 2 * ASIN(SQRT(POWER(SIN((-33.869984 - dogs.latitude) * PI() / 180 / 2), 2) + COS(-33.869984 * PI() / 180) * COS(dogs.latitude * PI() / 180) * POWER(SIN((151.206899 - dogs.longitude) * PI() / 180 / 2), 2)))) BETWEEN 0.0 AND 2) ORDER BY distance ASC[0m
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 12:07:58 +1000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 181ms (Views: 169.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 12:08:03 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 12:10:45 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.7ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 12:13:03 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 12:13:25 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 15:26:48 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.8ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery3' with type 'application/javascript'
+Checked in these paths: 
+  /Users/textchimp/wdi/bloggo/app/assets/config
+  /Users/textchimp/wdi/bloggo/app/assets/images
+  /Users/textchimp/wdi/bloggo/app/assets/javascripts
+  /Users/textchimp/wdi/bloggo/app/assets/stylesheets
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actioncable-5.2.0/lib/assets/compiled
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/activestorage-5.2.0/app/assets/javascripts
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionview-5.2.0/lib/assets/compiled
+  /Users/textchimp/wdi/bloggo/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1125162660002517331_70330805775040'
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 15:27:11 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/textchimp/wdi/bloggo/app/assets/config
+  /Users/textchimp/wdi/bloggo/app/assets/images
+  /Users/textchimp/wdi/bloggo/app/assets/javascripts
+  /Users/textchimp/wdi/bloggo/app/assets/stylesheets
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actioncable-5.2.0/lib/assets/compiled
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/activestorage-5.2.0/app/assets/javascripts
+  /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/actionview-5.2.0/lib/assets/compiled
+  /Users/textchimp/wdi/bloggo/node_modules):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     9:     <%= javascript_include_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1125162660002517331_70330859783800'
+Started GET "/dogs" for 127.0.0.1 at 2018-05-23 15:30:07 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 2171ms (Views: 2158.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:30:13 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:30:36 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 432ms (Views: 429.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:30:42 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:32:09 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:33:27 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 402ms (Views: 400.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:33:47 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 412ms (Views: 410.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:33:54 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 408ms (Views: 406.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:35:12 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2882ms (Views: 2880.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:36:36 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1884ms (Views: 1882.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:37:00 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1889ms (Views: 1887.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:43:33 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.8ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 115ms (Views: 111.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-23 15:43:36 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:67
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mDog Load (3.8ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Update (5.0ms)[0m  [1m[33mUPDATE "dogs" SET "bio" = $1, "latitude" = $2, "longitude" = $3, "updated_at" = $4 WHERE "dogs"."id" = $5[0m  [["bio", "A very good doggie."], ["latitude", -33.858481], ["longitude", 151.153243], ["updated_at", "2018-05-24 02:12:40.088365"], ["id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Update (0.5ms)[0m  [1m[33mUPDATE "dogs" SET "bio" = $1, "updated_at" = $2 WHERE "dogs"."id" = $3[0m  [["bio", "A very bad doggo! Do not recommend!"], ["updated_at", "2018-05-24 02:14:33.478350"], ["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Update (0.6ms)[0m  [1m[33mUPDATE "dogs" SET "bio" = $1, "updated_at" = $2 WHERE "dogs"."id" = $3[0m  [["bio", "Pretty good guy. Decent doggo"], ["updated_at", "2018-05-24 02:15:19.731322"], ["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mDog Load (2.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio ILIKE '%good%')[0m
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" ORDER BY "dogs"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDog Update (0.7ms)[0m  [1m[33mUPDATE "dogs" SET "name" = $1, "updated_at" = $2 WHERE "dogs"."id" = $3[0m  [["name", "Ruby Impostor"], ["updated_at", "2018-05-24 02:16:17.595221"], ["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-05-24 12:16:24 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/textchimp/.rvm/gems/ruby-2.4.1/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (6.8ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:16:27 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:16
+  Rendered dogs/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 68ms (Views: 65.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:22:02 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 68ms (Views: 56.5ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:22:05 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:22:05 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:22:23 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:22:32 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:23:32 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2018-05-24 12:24:37 +1000
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:24
+  Rendered dogs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:27:21 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (hell):
+  
+app/controllers/dogs_controller.rb:6:in `search'
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:30:12 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (1.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."name" = $1[0m  [["name", "doggo"]]
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 42ms (Views: 32.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:30:21 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."name" = $1[0m  [["name", "Ruby"]]
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:30:37 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."name" = $1[0m  [["name", "Ruby"]]
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:30:39 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."name" = $1[0m  [["name", "Ruby"]]
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-24 12:30:42 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:73
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:30:53 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."name" = $1[0m  [["name", "Ruby"]]
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/3" for 127.0.0.1 at 2018-05-24 12:30:55 +1000
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:73
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:32:39 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.9ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE 'Ruby')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 36ms (Views: 28.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:34:00 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE '%Ruby%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 40ms (Views: 32.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:35:31 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE '%Ruby%' OR bio LIKE '%Ruby%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:35:32 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE '%Ruby%' OR bio LIKE '%Ruby%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:35:36 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE '%doggo%' OR bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Decent+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:36:12 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Decent doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE '%Decent doggo%' OR bio LIKE '%Decent doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:36:33 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (name LIKE '%good doggo%' OR bio LIKE '%good doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:37:08 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:37:10 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:37:59 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:38:09 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%good doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:39:03 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%good%' AND bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 39ms (Views: 31.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:42:22 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%good%' AND bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 40ms (Views: 33.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:42:24 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%good%' AND bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=decent+good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:42:53 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"decent good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%decent%' AND bio LIKE '%good%' AND bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=decent+good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:43:15 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"decent good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio ILIKE '%decent%' AND bio ILIKE '%good%' AND bio ILIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 34ms (Views: 27.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=decent+good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:43:38 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"decent good doggo", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 3) in: bio ILIKE ? AND bio ILIKE ? AND bio ILIKE ?):
+  
+app/controllers/dogs_controller.rb:11:in `search'
+Started GET "/search?utf8=%E2%9C%93&query=decent+good+doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:44:44 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"decent good doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%["decent", "good", "doggo"]%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:44:52 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%["doggo"]%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:45:11 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE (bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=doggo&commit=Search" for 127.0.0.1 at 2018-05-24 12:46:00 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"doggo", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE ( name LIKE '%doggo%' OR bio LIKE '%doggo%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 34ms (Views: 27.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Ruby&commit=Search" for 127.0.0.1 at 2018-05-24 12:46:08 +1000
+Processing by DogsController#search as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Ruby", "commit"=>"Search"}
+  Rendering dogs/search.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE ( name LIKE '%Ruby%' OR bio LIKE '%Ruby%')[0m
+  ↳ app/views/dogs/search.html.erb:7
+  Rendered dogs/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+

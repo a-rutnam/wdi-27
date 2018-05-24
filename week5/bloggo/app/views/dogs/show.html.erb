@@ -1,0 +1,55 @@
+<style>
+  /* Always set the map height explicitly to define the size of the div
+   * element that contains the map. */
+  #map {
+    height: 100%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<script>
+
+  function initMap() {
+    var myLatLng = {lat: <%= @dog.latitude %>, lng: <%= @dog.longitude %> };
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+  </script>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <strong>Roundness:</strong>
+  <%= @dog.roundness %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @dog.bio %>
+</p>
+
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>
+
+<div id="map"></div>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSawZrR6b_qDsmiGyxDwf65TpYlrdUz6o&callback=initMap">
+    </script>
