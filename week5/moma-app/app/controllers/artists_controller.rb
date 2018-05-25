@@ -36,14 +36,24 @@ class ArtistsController < ApplicationController
 
   def update
     artist = Artist.find params[:id]
-    artist.update artist_params
 
-    if artist.errors.any?
+    # check the result of the update directly (returns false on errors)
+    if artist.update artist_params
+      # success
+      redirect_to artist_path( artist )   # can also write "redirect_to artist"
+    else
+      # validation error
       flash[:errors] = artist.errors
       redirect_to edit_artist_path( artist )
-    else
-      redirect_to artist_path( artist )   # can also write "redirect_to artist"
     end
+
+    # artist.update artist_params
+    # if artist.errors.any?
+    #   flash[:errors] = artist.errors
+    #   redirect_to edit_artist_path( artist )
+    # else
+    #   redirect_to artist_path( artist )   # can also write "redirect_to artist"
+    # end
 
   end
 
