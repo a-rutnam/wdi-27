@@ -11,6 +11,8 @@ class DashboardController < ApplicationController
 
   def cpu_hog
 
+    # Need to set this header to allow other domains to access this page via AJAX
+    # (i.e. you guys trying to use my Rails API endpoint from your own dashboards)
     headers['Access-Control-Allow-Origin'] = '*'
 
     hog = `ps xr|head -n 2`.split("\n")[1]
