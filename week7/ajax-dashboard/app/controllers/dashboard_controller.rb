@@ -13,6 +13,7 @@ class DashboardController < ApplicationController
 
     # Need to set this header to allow other domains to access this page via AJAX
     # (i.e. you guys trying to use my Rails API endpoint from your own dashboards)
+    # This prevents the "CORS" browser error 
     headers['Access-Control-Allow-Origin'] = '*'
 
     hog = `ps xr|head -n 2`.split("\n")[1]
