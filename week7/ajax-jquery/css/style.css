@@ -1,0 +1,9 @@
+
+img.imgResult {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+img.imgResult:hover{
+  border: 1px solid gray;
+}
