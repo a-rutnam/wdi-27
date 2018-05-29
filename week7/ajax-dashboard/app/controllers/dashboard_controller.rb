@@ -23,6 +23,8 @@ class DashboardController < ApplicationController
 
     @hogdata = hog  # for the template response
 
+    # We can use the same URL route & action to respond to both standard browser HTML requests
+    # and also AJAX JSON requests by using 'respond_to'
     respond_to do |format|
       format.html # render default template, i.e. app/views/dashboard/cpu_hog.html.erb
       format.json {  render json: response  }  # render JSON for an AJAX request
