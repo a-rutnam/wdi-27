@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Flickr Search</title>
+</head>
+<body>
+
+<h1>Vue Flickr</h1>
+
+<div id="appRoot">
+
+  <div id="fullscreen"></div>
+
+  <input @keydown.enter="doSearch" type="text" v-model="searchText">
+  <button @click="doSearch">Search</button>
+
+  <br>
+
+  <div v-if="!results.length" >
+    Please enter a search query...
+  </div>
+  <div v-else>
+
+    <photo-result
+      v-for="result in results"
+      :photo="result"
+      :key="result.id">
+    </photo-result>
+
+  </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/flickr.js"></script>
+</body>
+</html>
