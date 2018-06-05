@@ -17,6 +17,7 @@ class Secrets extends Component {
     }
 
     this.saveSecret = this.saveSecret.bind( this );
+    // window.secrets = this;  // if you REALLY want to inspect a Component object in the console...
   }
 
   componentWillMount(){
@@ -61,9 +62,7 @@ class Secrets extends Component {
       <div className="App">
         <h1>Tell us Your Secret</h1>
         <SecretsForm reportSecret={ this.saveSecret } />
-        {
-          this.state.secrets.length && this.state.secrets.map( s => <p key={ s.id }>{ s.content }</p>)
-        }
+        { this.state.secrets.map( s => <p key={ s.id }>{ s.content }</p>) }
       </div>
     );
   }
