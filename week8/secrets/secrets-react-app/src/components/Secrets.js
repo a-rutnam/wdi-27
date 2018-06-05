@@ -36,7 +36,7 @@ class Secrets extends Component {
     // load secrets from backend as soon as this component mounts, and then re-load once
     // a second, to make sure the page always shows an up-to-date list of secrets
     fetchSecrets();
-    setInterval(fetchSecrets, 1000);
+    setInterval(fetchSecrets, 5000);
 
   }
 
