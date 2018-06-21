@@ -31,8 +31,21 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    setJWTHeaderFromLocalStorage(){
+      if( window.localStorage ){
+        axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('authToken');
+      }
+    }
+  },
+  created(){
+    this.setJWTHeaderFromLocalStorage();
+  },
+
 }
 </script>
 

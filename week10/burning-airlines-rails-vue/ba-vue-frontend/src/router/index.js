@@ -5,6 +5,7 @@ import HelloWorld from '@/components/HelloWorld'
 import FlightSearch from '@/components/FlightSearch';
 import FlightSearchResults from '@/components/FlightSearchResults';
 import FlightDetails from '@/components/FlightDetails';
+import Login from '@/components/Login';
 
 Vue.use(Router)
 
@@ -14,6 +15,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/login',
+      name: 'loginForm',
+      component: Login
     },
     {
       path: '/search',

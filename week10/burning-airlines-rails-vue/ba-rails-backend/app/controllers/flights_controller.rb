@@ -1,5 +1,7 @@
 class FlightsController < ApplicationController
 
+  before_action :authenticate_user, only: [ :show ]
+
   def search
 
     puts "origin: #{params[:origin]}"
@@ -19,6 +21,11 @@ class FlightsController < ApplicationController
   end
 
   def show
+
+    # Knock provides the current_user method to return the user (if any) that was
+    # successfully authenticated via the `/user_token` route
+    p current_user
+
     flight = Flight.find params[:id]
 
     render({
