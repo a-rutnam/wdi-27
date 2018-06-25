@@ -17,15 +17,16 @@ MongoClient.connect('mongodb://127.0.0.1:27017/ba', (err, client) => {
 });
 
 
-app.listen(3000, () => {
+const server = app.listen(3000, () => {
   console.log('Server listening on port 3000...');
 });
+module.exports = server;
 
 app.use( express.static('public') );
 
 app.get('/', (req, res) => {
-  // console.log('got request!');
-  res.send('<h1>Hello World!</h1>');
+  // res.send('<h1>Hello World!</h1>');
+  res.send('Hello World!');
 });
 
 app.get('/dogs', (req, res) => {
