@@ -1,0 +1,204 @@
+[1] pry(main)> # Regular expressions!
+[2] pry(main)>
+[3] pry(main)> "bo
+[3] pry(main)> "bob" =~ /bob/
+=> 0
+[4] pry(main)> "my name is bob" =~ /bob/
+=> 11
+[5] pry(main)> "my name is blob" =~ /bob/
+=> nil
+[6] pry(main)> "cat" =~ /[chs]at/
+=> 0
+[7] pry(main)> "hat" =~ /[chs]at/
+=> 0
+[8] pry(main)> "sat" =~ /[chs]at/
+=> 0
+[9] pry(main)> "fat" =~ /[chs]at/
+=> nil
+[10] pry(main)> "fat" =~ /c|hat/
+=> nil
+[11] pry(main)> "cat" =~ /c|hat/
+=> 0
+[12] pry(main)> "hat" =~ /c|hat/
+=> 0
+[13] pry(main)> "chat" =~ /c|hat/
+=> 0
+[14] pry(main)> "chat" =~ /(c|h|s)at/
+=> 1
+[15] pry(main)> "chat" =~ /c|hat/
+=> 0
+[16] pry(main)> "chat" =~ /(c|h)at/
+=> 1
+[17] pry(main)> "fat" =~ /[chfs]at/
+=> 0
+[18] pry(main)> "bob" =~ /[A-Za-z]ob/
+=> 0
+[19] pry(main)> "5ob" =~ /[A-Za-z]ob/
+=> nil
+[20] pry(main)>
+[21] pry(main)>
+[22] pry(main)>
+[23] pry(main)> "5ob" =~ /[^A-Za-z]ob/
+=> 0
+[24] pry(main)> "Hob" =~ /[^A-Za-z]ob/
+=> nil
+[25] pry(main)>
+[25] pry(main)>
+[26] pry(main)>
+[27] pry(main)> "5ob" =~ /\wob/
+=> 0
+[28] pry(main)> "aob" =~ /\wob/
+=> 0
+[29] pry(main)> "Zob" =~ /\wob/
+=> 0
+[30] pry(main)> ".ob" =~ /\wob/
+=> nil
+[31] pry(main)> ".ob" =~ /\Wob/
+=> 0
+[32] pry(main)> "tob" =~ /\Wob/
+=> nil
+[33] pry(main)> "tob" =~ /\dob/
+=> nil
+[34] pry(main)> "7ob" =~ /\dob/
+=> 0
+[35] pry(main)> "7ob" =~ /.ob/
+=> 0
+[36] pry(main)> "aob" =~ /.ob/
+=> 0
+[37] pry(main)> "Zob" =~ /.ob/
+=> 0
+[38] pry(main)> "-ob" =~ /.ob/
+=> 0
+[39] pry(main)> " ob" =~ /.ob/
+=> 0
+[40] pry(main)>
+[40] pry(main)>
+[41] pry(main)> "bob" =~ /b?ob/
+=> 0
+[42] pry(main)> "ob" =~ /b?ob/
+=> 0
+[43] pry(main)> "ob" =~ /b+ob/
+=> nil
+[44] pry(main)> "bob" =~ /b+ob/
+=> 0
+[45] pry(main)> "bbob" =~ /b+ob/
+=> 0
+[46] pry(main)> "bbob" =~ /b{3}ob/
+=> nil
+[47] pry(main)> "bbbob" =~ /b{3}ob/
+=> 0
+[48] pry(main)> "bbbbob" =~ /b{3}ob/
+=> 1
+[49] pry(main)> "bbbbob" =~ /.*/
+=> 0
+[50] pry(main)> "ob" =~ /.*/
+=> 0
+[51] pry(main)> "" =~ /.*/
+=> 0
+[52] pry(main)> "bob and jane" =~ /(.*) and (.*)/
+=> 0
+[53] pry(main)> $1
+=> "bob"
+[54] pry(main)> $2
+=> "jane"
+[55] pry(main)> "bob24 and jane100" =~ /(.*) and (.*)/
+=> 0
+[56] pry(main)> $1
+=> "bob24"
+[57] pry(main)>
+[58] pry(main)>
+[59] pry(main)> "bob24 and jane100" =~ /(.*)\d+ and (.*)\d+/
+[59] pry(main)> "bob24 and jane100" =~ /(.*)\d+ and (.*)\d+/
+=> 0
+[60] pry(main)> $1
+=> "bob2"
+[61] pry(main)> "bob24 and jane100" =~ /(.*)\d{2,} and (.*)\d{2,}/
+=> 0
+[62] pry(main)> $1
+=> "bob"
+[63] pry(main)> $2
+=> "jane1"
+[64] pry(main)> "bob24 and jane100" =~ /(\D*) and (\D*)/
+=> 5
+[65] pry(main)> $1
+=> ""
+[66] pry(main)> "bob24 and jane100" =~ /(\D*)\d+ and (\D*)\d+/
+=> 0
+[67] pry(main)> $1
+=> "bob"
+[68] pry(main)> $2
+=> "jane"
+[69] pry(main)> "bob and jane and bob" =~ /(.*) and (.*) and \1/
+=> 0
+[70] pry(main)> $1
+=> "bob"
+[71] pry(main)> $2
+=> "jane"
+[72] pry(main)> "bob and jane and seth" =~ /(.*) and (.*) and \1/
+=> 3
+[73] pry(main)> $1
+=> ""
+[74] pry(main)> "bob and jane and seth" =~ /(.+) and (.+) and \1/
+=> nil
+[75] pry(main)>
+[75] pry(main)> m  = "Get num: 42".match /(\d+)/
+=> #<MatchData "42" 1:"42">
+[76] pry(main)> m
+=> #<MatchData "42" 1:"42">
+[77] pry(main)>
+[78] pry(main)> m[0]
+=> "42"
+[79] pry(main)> m[1]
+=> "42"
+[80] pry(main)> m  = "Get num: 42".match /.*(\d+)/
+=> #<MatchData "Get num: 42" 1:"2">
+[81] pry(main)> m[0]
+=> "Get num: 42"
+[82] pry(main)> m[1]
+=> "2"
+[83] pry(main)> m  = "Get num: 42".match /.*?(\d+)/
+=> #<MatchData "Get num: 42" 1:"42">
+[84] pry(main)> m.string
+=> "Get num: 42"
+[85] pry(main)> m[1]
+=> "42"
+[86] pry(main)> m.post_match
+=> ""
+[87] pry(main)> m  = "Get num: 42 AFTER".match /.*?(\d+)/
+
+=> #<MatchData "Get num: 42" 1:"42">
+[88] pry(main)> m.post_match
+=> " AFTER"
+[89] pry(main)>
+[89] pry(main)> matches = "Num: 42.".match( /(?<num>\d+)/ )
+=> #<MatchData "42" num:"42">
+[90] pry(main)> matches.num
+NoMethodError: undefined method `num' for #<MatchData "42" num:"42">
+from (pry):80:in `__pry__'
+[91] pry(main)>
+[92] pry(main)> matches[:num]
+=> "42"
+[93] pry(main)> matches = "Phone Num: 423-2345.".match( /(?<prefix>\d+).*?(?<extension>\d+)/ )
+=> #<MatchData "423-2345" prefix:"423" extension:"2345">
+[94] pry(main)>
+[95] pry(main)> matches[:prefix]
+=> "423"
+[96] pry(main)> matches[1]
+=> "423"
+[97] pry(main)> matches = "Phone Num: 423-2345.".match( /
+[97] pry(main)* (?<prefix>\d+) # get the first three digits of the phone number
+[97] pry(main)* .*?            # ignore any dash or space or other separator
+sh: *?: command not found
+Error: there was a problem executing system command: *?            # ignore any dash or space or other separator
+[97] pry(main)* .ls
+[97] pry(main)*
+[97] pry(main)> matches = "Phone Num: 423-2345.".match( /
+[97] pry(main)*   (?<prefix>\d+) # get the first three digits of the phone number
+[97] pry(main)*   .*?            # ignore any dash or space or other separator
+sh: *?: command not found
+Error: there was a problem executing system command: *?            # ignore any dash or space or other separator
+[97] pry(main)*
+[97] pry(main)>
+[97] pry(main)>
+regular-expressions$
+regular-expressions$
