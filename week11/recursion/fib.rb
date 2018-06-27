@@ -25,5 +25,16 @@ def fib_rec( n )
   end
 end
 
+def fib_rec_fast(n, a=1, b=1)
+  if n < 2
+    b
+  else
+    return fib_rec_fast(n-1, b, a+b)
+  end
+end
+
+
+
+
 require 'pry'; binding.pry
 puts "Yow!"
