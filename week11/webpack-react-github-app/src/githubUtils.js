@@ -1,13 +1,15 @@
 
 import axios from 'axios';
 
-const CREDENTIALS = 'INSERT_API_CREDENTIALS_HERE'
+const CREDENTIALS = 'INSERT_CLIENT_ID_AND_CLIENT_SECRET';
 
 const GitHub = {
   getUserInfo( username ){
     return axios.get(`https://api.github.com/users/${ username }?${ CREDENTIALS }`);
+  },
+  getUserRepos( username ){
+    return axios.get(`https://api.github.com/users/${ username }/repos?${ CREDENTIALS }`);
   }
-  // getUserRepos - different API request
 };
 
 export default GitHub;

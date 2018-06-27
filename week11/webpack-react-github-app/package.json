@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test"  : "echo \"Error: no test specified\" && exit 1",
-    "dev"   : "./node_modules/.bin/webpack-dev-server --progress --hot --inline --mode=development",
+    "dev"   : "./node_modules/.bin/webpack-dev-server --hot --inline --mode=development",
     "build" : "./node_modules/.bin/webpack --mode=production"
   },
   "keywords": [],
